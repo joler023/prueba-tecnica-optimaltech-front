@@ -7,9 +7,7 @@ const Home = () => {
   const { isLoading, data, error } = useQuery({
     queryKey: ["books"],
     queryFn: async () => {
-      const response = await http.get<Book[]>(
-        "http://localhost:3000/book/all"
-      );
+      const response = await http.get<Book[]>("/book/all");
       return response.data;
     },
   });

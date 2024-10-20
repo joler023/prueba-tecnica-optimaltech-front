@@ -16,6 +16,8 @@ RUN npm i -g serve
 # Copiar archivos
 COPY . .
 
+ENV VITE_BASE_URL="https://prueba-tecnica-optimaltech-back.onrender.com"
+
 # Compilar
 RUN npm run build
 
